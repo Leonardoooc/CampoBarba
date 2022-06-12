@@ -57,4 +57,9 @@ public class telaPrincipalActivity extends AppCompatActivity {
         Intent intencao = new Intent(this, telaAgendamentoActivity.class);
         startActivity(intencao);
     }
+
+    public void backToLogin(View v) {
+        Intent intencao = new Intent(this, MainActivity.class);
+        startActivity(intencao);
+    }
 }

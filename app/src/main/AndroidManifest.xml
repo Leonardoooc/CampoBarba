@@ -10,8 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
+            android:name=".telaAgendadosActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".telaFuncionariosActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".telaAdminActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".telaConfirmarActivity"
             android:exported="false"

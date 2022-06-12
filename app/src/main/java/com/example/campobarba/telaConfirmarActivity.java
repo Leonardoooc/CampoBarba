@@ -47,4 +47,8 @@ public class telaConfirmarActivity extends AppCompatActivity {
         Intent intencao = new Intent(this, telaPrincipalActivity.class);
         startActivity(intencao);
     }
+    public void backToAgendamento(View v) {
+        Intent intencao = new Intent(this, telaAgendamentoActivity.class);
+        startActivity(intencao);
+    }
 }

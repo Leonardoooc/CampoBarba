@@ -45,14 +45,11 @@ public class telaAgendamentoActivity extends AppCompatActivity {
         final int day = calendar.get(Calendar.DAY_OF_MONTH);
 
         selectButton.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-
                 DatePickerDialog datePickerDialog = new DatePickerDialog(telaAgendamentoActivity.this, android.R.style.Theme_Holo_Light_Dialog_MinWidth,setListener,year,month,day);
                 datePickerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 datePickerDialog.show();
-
             }
         });
 
@@ -64,10 +61,6 @@ public class telaAgendamentoActivity extends AppCompatActivity {
                 selectButton.setText(date);
             }
         };
-
-
-
-
     }
 
     public void popTimePicker(View v)
@@ -78,11 +71,9 @@ public class telaAgendamentoActivity extends AppCompatActivity {
                 t1hour = selectedHour;
                 t1minute = selectedMinute;
                 timeButton.setText(String.format(Locale.getDefault(), "%02d:%02d", t1hour, t1minute));
-                hora = t1hour+":"+t1minute;
+                hora = timeButton.getText().toString();
             }
         };
-
-
         int style = AlertDialog.THEME_HOLO_LIGHT;
         TimePickerDialog timePickerDialog = new TimePickerDialog(this, style, onTimeSetListener, t1hour, t1minute, true);
         timePickerDialog.show();
@@ -92,8 +83,8 @@ public class telaAgendamentoActivity extends AppCompatActivity {
         Intent intencao = new Intent(this, telaConfirmarActivity.class);
         startActivity(intencao);
     }
-
-
-
-
+    public void backToPrincipal(View v) {
+        Intent intencao = new Intent(this, telaPrincipalActivity.class);
+        startActivity(intencao);
+    }
 }

@@ -26,4 +26,8 @@ public class telaCadastroActivity extends AppCompatActivity {
         Intent intencao = new Intent(this, telaPrincipalActivity.class);
         startActivity(intencao);
     }
+    public void backToLogin2(View v) {
+        Intent intencao = new Intent(this, MainActivity.class);
+        startActivity(intencao);
+    }
 }
